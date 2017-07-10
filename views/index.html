@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body>
+{% include "partials/header.html" %}
+<section class="container noibat">
+    <div class="row">
+        {% if messages.success %}
+        <div class="text-center alert alert-danger">{{ messages.success }}</div>
+        {% endif %}
+        {% if messages.error %}
+        <div class="text-center alert alert-danger">{{ messages.error }}</div>
+        {% endif %}
+        <h2>SẢN PHẨM NỔI BẬT</h2>
+        <div class="title">
+            <img src="img/title.png">
+        </div>
+        {% for i in carts %}
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 special">
+
+            <div class="list">
+                <div class="item">
+                    <div class="image">
+                        <img src="img/{{i.image}}">
+                        <div class="image-overlay">
+                            <a href="/product-detail/{{i.id}}"><span>Xem Chi Tiết</span></a>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <a href="product-detail.html">
+                            <h3>{{i.tenhang}}</h3>
+                        </a>
+                        <p>{{i.tinhchat}}</p>
+                        <span><a href="#"></a></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% include "partials/footer.html" %}
+
+{% include "partials/script.html" %}
+</body>
+</html>

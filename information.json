@@ -1,0 +1,73 @@
+{
+  "information": [{
+    "tenhang" : "Mơ mặn ngọt",
+    "id" : "1",
+    "tinhchat" : "chua, mặn, ngọt",
+    "price" : "50000",
+    "soluong" : "1",
+    "image" : "man1.jpg"
+  },{
+    "tenhang" : "Mơ TS3",
+    "id" : "2",
+    "tinhchat" : "chua, cay,mặn, ngọt",
+    "price" : "60000",
+    "soluong" : "1",
+    "image" : "mo2.jpg"
+  },{
+    "tenhang" : "Mơ gừng giòn",
+    "id" : "3",
+    "tinhchat" : "chua, giòn, ngọt",
+    "price" : "80000",
+    "soluong" : "1",
+    "image" : "mo4.jpg"
+  },{
+    "tenhang" : "Mơ chùa Hương",
+    "id" : "4",
+    "tinhchat" : "chua, mặn, ngọt,dẻo",
+    "price" : "20000",
+    "soluong" : "1",
+    "image" : "mo5.jpg"
+  },{
+    "tenhang" : "Chanh đào",
+    "id" : "5",
+    "tinhchat" : "chua, ngọt",
+    "price" : "120000",
+    "soluong" : "1",
+    "image" : "chanh1.jpg"
+  },{
+    "tenhang" : "Xoài dẻo",
+    "id" : "6",
+    "tinhchat" : "chua,dẻo , ngọt",
+    "price" : "26000",
+    "soluong" : "1",
+    "image" : "xoai1.jpg"
+  },{
+    "tenhang" : "trám mặn",
+    "id" : "7",
+    "tinhchat" : "chua, mặn",
+    "price" : "87000",
+    "soluong" : "1",
+    "image" : "tramman.jpg"
+  },{
+    "tenhang" : "me tươi cay",
+    "id" : "8",
+    "tinhchat" : "chua,cay",
+    "price" : "23000",
+    "soluong" : "1",
+    "image" : "me2.jpg"
+  },{
+    "tenhang" : "chanh cốm",
+    "id" : "9",
+    "tinhchat" : "chua, ngọt",
+    "price" : "30000",
+    "soluong" : "1",
+    "image" : "chanhcom.jpg"
+  },{
+    "tenhang" : "Mơ xào",
+    "id" : "10",
+    "tinhchat" : "chua, mặn",
+    "price" : "43000",
+    "soluong" : "1",
+    "image" : "mo9.jpg"
+  }]
+}

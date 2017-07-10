@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body>
+{% include "partials/header.html" %}
+<section class="container-fluid noibat">
+    <div class="row">
+        {% for i in carts %}
+        <div class="col-xs-12- col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="image-product">
+                        <img src="/img/{{i.image}}" class="width-img-100">
+                    </div>
+                    <div class="promotion">
+                        <p>Chương trình TÚI ZIP TIẾT KIỆM THÁNG 8. Mua túi Zip 300gr giảm ngay 3.000đ so với hộp. </p>
+                        <p>Túi 500gr giảm ngay 5000đ so với hộp.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pro-des">
+                    <div class="title-product">
+                        <h2>{{i.tenhang}}</h2>
+                        <p>{{i.tinhchat}}</p>
+                    </div>
+                    <!--<div class="description-product">-->
+                        <!--<p>Những trái mơ tươi được kết hợp với sợi gừng giã tay cùng đường, muối tạo nên sản phẩm ô mai mơ gừng đủ vị chua, cay, mặn, ngọt. Sản phẩm không chỉ bắt mắt, ngon miệng mà còn là có tác dụng giữ ấm cổ họng rất tốt trong mùa đông.</p>-->
+                    <!--</div>-->
+
+                    <div class="checkout">
+                        <table class="table rwd-table">
+                            <thead>
+                            <tr>
+
+                                <th class="col-xs-4">Đơn Giá</th>
+                                <th class="col-xs-4">Số Lượng</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+
+                                <td>{{i.price}} đ</td>
+                                <td>
+                                    <div class="wan-spinner">
+                                        <a data-idsub="1" href="javascript:void(0)" class="minus" id="minus" onclick="minus(this)">-</a>
+                                        <input type="text" class="total-mask" data-price="{{i.price}}" data-idsub="1" value="0" style="width: 40px;">
+                                        <a data-idsub="1" href="javascript:void(0)" class="plus" id="plus" onclick="plus(this)">+</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="product-addcart">
+                        <div class="col-xs-12 money">
+                            <b>Tổng tiền: </b>
+                            <b class="money-total" id="total-money">0</b>
+                            <span>đ</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 shopnow">
+                            <a href="/giohang2" title="Mua hàng" class="btn btn-lg background-red color-white text-uppercase pull-right" data-modulenameascii="mo" data-link="/gui-don-hang" id="add-to-cart-to-payment">Mua hàng</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 product-cart">
+                            <a href="javascript:void(0)" onclick="addCart()" title="Thêm vào giỏ hàng" class="btn btn-lg color-white text-uppercase pull-right" data-modulenameascii="mo" id="add-to-cart"><i class="glyphicon glyphicon-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="hidden-xs col-sm-12 col-md-12 col-lg-10 col-lg-offset-1 comment">
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Người dùng đánh giá</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <h4 style="color: #8b0304; font-size: 24px;">Đánh giá của bạn</h4>
+                        <div style="margin-bottom: 20px;" class="my-rating"></div>
+                        <textarea style="resize: none;" class="form-control" row="5" placeholder="Nội dung đánh giá"></textarea>
+                        <a href="" style="float: right;margin-top: 20px; display: block"><button type="button" class="btn btn-primary">Gửi đánh giá</button></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "partials/footer.html" %}
+
+{% include "partials/script.html" %}
+</body>
+</html>

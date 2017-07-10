@@ -1,0 +1,278 @@
+
+{% include "partials/head.html" %}
+<header class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/img/logo.png"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="menu collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav nav-mobile">
+                        <li class="dropdown">
+                            <a href="list-product.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm<span class="caret"></span></a>
+                            <ul>
+                                <li><a href="list-product.html">Ô Mai</a></li>
+                                <li><a href="list-product.html">Chè</a></li>
+                                <li><a href="list-product.html">Kẹo</a></li>
+                                <li><a href="list-product.html">Gói Quà Tặng</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="vanhoa.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Văn Hóa <span class="caret"></span></a>
+                            <ul>
+                                <li><a href="vanhoa.html">Sự kiện STORE</a></li>
+                                <li><a href="vanhoa.html">Cảm xúc STORE</a></li>
+                                <li><a href="vanhoa.html">Nét Đẹp Văn Hóa</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giới thiệu <span class="caret"></span></a>
+                            <ul>
+                                <li><a href="">Văn Hóa Công Ty</a></li>
+                                <li><a href="">Nhận Diện Thương Hiệu</a></li>
+                                <li><a href="">Triết Lí Kinh Doanh</a></li>
+                                <li><a href="">Tầm Nhìn Sứ Mệnh</a></li>
+                                <li><a href="">Tuyển Dụng</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hỗ Trợ <span class="caret"></span></a>
+                            <ul>
+                                <li><a href="">Hướng Dẫn Đặt Hàng</a></li>
+                                <li><a href="">Chính Sách Và Quy Định</a></li>
+                                <li><a href="">Câu Hỏi Thường Gặp</a></li>
+                                <li><a href="">Hệ Thống Phân Phối</a></li>
+                                <li><a href="">Hòm Thư Góp Ý</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav nav-laptop">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>
+                            <a href="list-product.html">Sản phẩm</a>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="list-product.html">Ô Mai</a></li>
+                                    <li><a href="list-product.html">Chè</a></li>
+                                    <li><a href="list-product.html">Kẹo</a></li>
+                                    <li><a href="list-product.html">Gói Quà Tặng</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="vanhoa.html">Văn Hóa</a>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="vanhoa.html">Sự kiện STORE</a></li>
+                                    <li><a href="vanhoa.html">Cảm xúc STORE</a></li>
+                                    <li><a href="vanhoa.html">Nét Đẹp Văn Hóa</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Giới thiệu</a>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="">Văn Hóa Công Ty</a></li>
+                                    <li><a href="">Nhận Diện Thương Hiệu</a></li>
+                                    <li><a href="">Triết Lí Kinh Doanh</a></li>
+                                    <li><a href="">Tầm Nhìn Sứ Mệnh</a></li>
+                                    <li><a href="">Tuyển Dụng</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Hỗ Trợ</a>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="">Hướng Dẫn Đặt Hàng</a></li>
+                                    <li><a href="">Chính Sách Và Quy Định</a></li>
+                                    <li><a href="">Câu Hỏi Thường Gặp</a></li>
+                                    <li><a href="">Hệ Thống Phân Phối</a></li>
+                                    <li><a href="">Hòm Thư Góp Ý</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    {% if not username %}
+                    <ul class="nav navbar-nav navbar-right nav-laptop-right">
+                        <li>
+                            <div class="menu2">
+                                <ul>
+                                    <li id="menu-right-1"><a data-toggle="modal" href="#registerModal">Đăng kí</a></li>
+                                    <li id="menu-right-2"><a data-toggle="modal" href="#loginModal">Đăng nhập</a></li>
+                                    <li id="menu-right-3"><a href="/giohang2">Giỏ hàng</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    {% else %}
+                    <ul class="nav navbar-nav navbar-right nav-laptop-right">
+                        <li>
+                            <div class="menu2">
+                                <ul>
+                                    <li id="menu-right-1"><a href="">{{ username }}</a></li>
+                                    <li id="menu-right-2"><a href="/logout">Đăng xuất</a></li>
+                                    <li id="menu-right-3"><a href="/giohang2">Giỏ hàng</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    {% endif %}
+
+                    <!--<ul class="nav navbar-nav navbar-right nav-laptop-right">-->
+                        <!--<li>-->
+                            <!--<div class="menu2">-->
+                                <!--<ul>-->
+                                    <!--<li id="menu-right-1"><a href="/signin">Đăng nhập<span id="a1"></span></a></li>-->
+                                    <!--<li id="menu-right-2"><a href="/signup">Đăng ký</a></li>-->
+                                    <!--<li id="menu-right-3"><a href="/giohang2">Giỏ hàng</a></li>-->
+                                    <!--<li id="menu-right-4"><a href="javascript:void(0)">Tìm Kiếm</a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<section class="container-fluid" id="support">
+    <div class="row">
+        <div class="container">
+            <div>
+                <div class="support-wrap">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="/img/deliver.png">
+                                <span>Giao hàng siêu tốc</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/message.png">
+                                <span>Tư vấn miễn phí</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/usd.png">
+                                <span>Thanh toán khi nhận hàng</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="registerModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h1 class="text-center">ĐĂNG KÝ TÀI KHOẢN</h1>
+            </div>
+
+            <div class="modal-body">
+                <form action="/signup" method="post" class="form col-md-12 center-block">
+                    <div class="form-group">
+                        <input name="username" type="text" class="form-control input-lg" placeholder="Tên đăng nhập" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input name="password" type="password" class="form-control input-lg" placeholder="Mật khẩu" required>
+                    </div>
+
+                    <!--<div class="form-group">-->
+                        <!--<input type="password" class="form-control input-lg" placeholder="Xác nhận mật khẩu">-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" class="form-control input-lg" placeholder="Email">-->
+                    <!--</div>-->
+
+                    <div class="form-group">
+                        <input name="phonenumber" type="number" class="form-control input-lg" placeholder="Số điện thoại" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Đăng ký</button>
+                    </div>
+                    <div class="row">
+                        <div class="center col-md-12">
+                            <span></span>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn waves-effect waves-light blue" name="action"><i class="fa fa-facebook"></i>
+                                facebook
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn waves-effect waves-light red" type="submit" name="action">
+                                <i class="fa fa-google"></i>
+                                Google
+
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h1 class="text-center">ĐĂNG NHẬP</h1>
+            </div>
+
+            <div class="modal-body">
+                <form action="/signin" method="post" class="form col-md-12 center-block">
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control input-lg" placeholder="Tên đăng nhập" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control input-lg" placeholder="Mật khẩu" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Đăng nhập</button>
+                    </div>
+
+                    <!--<div class="modal-footer">-->
+                        <!--<a href="#registerModal" data-toggle="modal">Đăng ký</a><br>-->
+                        <!--<a href="#" class="dk">Quên mật khẩu?</a>-->
+                    <!--</div>-->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "partials/script.html" %}
+

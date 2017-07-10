@@ -1,0 +1,93 @@
+<div id="modal1" style="z-index: 1003; display: block; opacity: 1; transform: scaleX(1); top: 10%;" class="modal">
+    <ul class="tabs" style="width: 100%;">
+        <li class="tab" id="login-indicator"><a href="#login" class="">Đăng nhập</a></li>
+        <li class="tab" id="register-indicator"><a href="#signup" class="active">Đăng ký</a></li>
+        <div class="indicator" style="right: 0px; left: 225px;"></div></ul>
+    <div id="login" style="display: none;">
+        <div class="modal-content">
+            <div id="login-msg"></div>
+
+            <form method="post" id="frm-login">
+                <div class="input-field">
+                    <input id="email-lg" type="text" name="username" class="validate valid" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <input id="password-lg" type="password" name="password" class="validate valid" placeholder="Mật khẩu">
+                </div>
+
+                <p>
+                    <input type="checkbox" id="test5" name="remember">
+                    <label for="test5">Ghi nhớ tài khoản</label>
+                </p>
+
+                <button type="submit" class="btn teal waves-effect waves-light darken-3">Đăng nhập</button>
+                <a href="/user/forgot-password" class="left-align">
+                    <i class="fa fa-question-circle"></i>
+                    <b class="link-modal link--underline">Quên mật khẩu?</b>
+                </a>
+            </form>
+        </div>
+
+        <div class="modal-footer row">
+            <div class="col s6">
+                <a href="/auth/facebook" class="btn blue waves-effect waves-light">
+                    <b class="srt">Facebook</b>
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+            <div class="col s6">
+                <a href="/auth/google" class="btn red waves-effect waves-light">
+                    <b class="srt">Google</b>
+                    <i class="fa fa-google"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="signup" style="display: block;">
+        <form method="post" id="frm-register">
+            <div class="modal-content">
+                <div id="signup-msg" class="signup-msg"></div>
+
+                <div class="input-field">
+                    <input id="email" type="email" class="validate valid" name="email" placeholder="Email" data-position="top" data-delay="50" autocomplete="off">
+                    <label for="email" id="msg-email" class="active"></label>
+                </div>
+
+                <div class="input-field">
+                    <input id="password" type="password" class="validate valid" name="user_pass" placeholder="Mật khẩu" data-position="top" data-delay="50">
+                    <label for="password" id="msg-password" class="active"></label>
+                </div>
+
+                <p>
+                    <input type="checkbox" class="filled-in " id="showPassword">
+                    <label for="showPassword">Hiển thị mật khẩu</label>
+                </p>
+
+                <div class="input-field">
+                    <input id="name" type="text" class="validate " name="fullname" placeholder="Họ tên" data-position="top" data-delay="50" autocomplete="off">
+                    <label for="name" id="msg-fullname" class="active"></label>
+                </div>
+
+                <div class="input-field">
+                    <input id="phonenum" type="text" class="validate " name="phone" placeholder="Số điện thoại" data-position="top" data-delay="50" autocomplete="off">
+                    <label for="phonenum" id="msg-phone" class="active"></label>
+                </div>
+                <div id="recaptcha">
+                    <div class="g-recaptcha" data-sitekey="6Ld7yBMTAAAAAPfy0UHf5bN_YA4PbNGFCH06Yg0z" data-callback="validateCaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Ld7yBMTAAAAAPfy0UHf5bN_YA4PbNGFCH06Yg0z&amp;co=aHR0cHM6Ly90ZWNobWFzdGVyLnZuOjQ0Mw..&amp;hl=vi&amp;v=r20170629165701&amp;size=normal&amp;cb=jjzw2a3rul50" title="tiện ích con mã xác thực lại" width="304" height="78" frameborder="0" scrolling="no" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" id="btnRegister" class="btn blue waves-effect waves-light darken-3 disabled">
+                    Đăng ký
+                </button>
+                <p>
+                    Bằng cách nhấp vào Đăng ký, bạn đã đồng ý với các
+                    <a href="/trungtam/quy-dinh" target="_blank"> Quy&nbsp;định </a> của chúng tôi.
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

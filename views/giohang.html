@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body>
+{% include "partials/header.html" %}
+<section class="container-fluid giohang">
+    <div class="row">
+        <div class="title-wrap col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="title">
+                <h3 class="col-xs-12 col-sm-4 col-md-3 col-lg-3">GIỎ HÀNG</h3>
+            </div>
+        </div>
+        <div class="hidden-xs col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+            {% for i in carts %}
+            <table class="table table-bordered cart-products rwd-table">
+                <thead data-thead="Danh sách giỏ hàng">
+                <tr class="background-brown">
+                    <th class="cart-product-img">Hình ảnh</th>
+                    <th class="cart-product-title">Tên sản phẩm</th>
+                    <th class="cart-product-price">Đơn giá</th>
+                    <th class="cart-product-quantity">Số lượng</th>
+                    <th class="cart-product-total">Thành tiền</th>
+                    <th class="cart-product-delete">Xóa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="background-vani">
+                    <td data-th="Ảnh">
+                        <img src="img/{{image}}" class="mCS_img_loaded lazy-loaded">
+                    </td>
+                    <td data-th="Tên sản phẩm">
+                        <a href="">Mơ gừng chua ngọt - Hộp 500gr</a>
+                    </td>
+                    <td data-th="Đơn giá">{{price}} đ</td>
+                    <td data-th="Số lượng" id="fix-td-sm">
+                        <div class="wan-spinner">
+                            <a href="javascript:void(0)" class="minus" id="minus-cart">-</a>
+                            <input type="text" class="total-mask" data-productid="30" value="2">
+                            <a href="javascript:void(0)" class="plus" id="plus-cart">+</a>
+                        </div>
+                    </td>
+                    <td data-th="Thành tiền"><b class="color-red float-right">2,470,000 đ</b></td>
+                    <td data-th="Xóa">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!--{% endfor %}-->
+        </div>
+
+        <div class="col-xs-12 visible-xs giohang-xs">
+            <h3>Danh sách giỏ hàng:</h3>
+            <div class="list-donhang">
+                <table class="table table-bordered cart-products rwd-table">
+                    <tr>
+                        <td>Ảnh</td>
+                        <td><img src="/img/{{i.image}}"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên sản phẩm</td>
+                        <td>{{i.tenhang}}</td>
+                    </tr>
+                    <tr>
+                        <td>Đơn giá</td>
+                        <td>{{i.price}}</td>
+                    </tr>
+                    <tr>
+                        <td>Số lượng</td>
+                        <td>
+                            <div class="wan-spinner">
+                                <a href="javascript:void(0)" class="minus" id="minus-cart">-</a>
+                                <input type="text" id="item_28" class="total-mask" data-productid="28" data-productname="Hộp 250gr" value="3">
+                                <a href="javascript:void(0)" class="plus" id="plus-cart">+</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thành tiền</td>
+                        <td><b class="color-red">180,000 đ</b></td>
+                    </tr>
+                    <tr>
+                        <td>Xóa</td>
+                        <td>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table table-bordered cart-products rwd-table">
+                    <tr>
+                        <td>Ảnh</td>
+                        <td><img src="img/chanhcom.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên sản phẩm</td>
+                        <td>Mơ gừng chua ngọt - Hộp 500gr</td>
+                    </tr>
+                    <tr>
+                        <td>Đơn giá</td>
+                        <td>100.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>Số lượng</td>
+                        <td>
+                            <div class="wan-spinner">
+                                <a href="javascript:void(0)" class="minus" id="minus-cart">-</a>
+                                <input type="text" id="item_28" class="total-mask" data-productid="28" data-productname="Hộp 250gr" value="3">
+                                <a href="javascript:void(0)" class="plus" id="plus-cart">+</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thành tiền</td>
+                        <td><b class="color-red">180,000 đ</b></td>
+                    </tr>
+                    <tr>
+                        <td>Xóa</td>
+                        <td>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-6 col-lg-5 col-lg-offset-1 col-lg-push-4">
+            <div class="summary">
+                Tổng tiền: <b class="color-red">2.650.000 đ</b>
+            </div>
+        </div>
+
+        <div style="margin-top: 0; margin-bottom: 10px;" class="col-xs-12 visible-xs col-sm-3 col-md-4  col-lg-3 col-lg-offset-1 col-lg-push-7 thanhtoan">
+            <a href="thanhtoan.html"><button type="submit" class="btn btn-lg none-border-radius btn-block background-red color-white text-uppercase none-outline">Thanh toán</button></a>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-sm-pull-6 col-md-4 col-lg-2 col-lg-offset-1 col-lg-pull-6 deleteall col-md-pull-5">
+            <ul>
+                <li>
+                    <a href="/" class="btn btn"><i style="margin-right: 5px;" class="fa fa-long-arrow-left color-red"></i>Tiếp tục mua hàng</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="" onclick="deleteAllCart();" class="btn btn"><i style="margin-right: 5px;" class="fa fa-trash color-red"></i>Xóa tất cả</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+            <div style="float: right" class="col-xs-12 hidden-xs col-sm-5 col-md-4 col-lg-3 thanhtoan">
+                <a href="/thanhtoan"><button type="submit" class="btn btn-lg none-border-radius btn-block background-red color-white text-uppercase none-outline">Thanh toán</button></a>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+{% include "partials/footer.html" %}
+{% include "partials/script.html" %}
+</body>
+</html>
